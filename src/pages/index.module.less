@@ -1,0 +1,41 @@
+.bg1 {
+    background: radial-gradient(76.15% 70.3% at 29.7% 50%, rgba(92, 44, 197, 0.40) 0%, rgba(92, 44, 197, 0.90) 100%);
+}
+
+.bg2 {
+    border: 2px solid transparent;
+    background-image: radial-gradient(105.9% 100.04% at 48.33% 0%, #F3AF00 0%, #D33402 100%),
+    linear-gradient(180deg , #FBCA4D 0%, #E75D16 100%);
+    box-shadow: 0px -3.881px 3.881px 0px #E1451B inset, 0px 3.881px 3.881px 0px #ECAF0F inset;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.bg3 {
+    border-top: 1px solid transparent; /* 设置透明的顶部边框 */
+    border-bottom: 1px solid transparent; /* 设置透明的底部边框 */
+    background: linear-gradient(90deg, rgba(249, 136, 55, 0.00) 0%, rgba(249, 136, 55, 0.15) 50.36%, rgba(249, 136, 55, 0.00) 100%);
+    border-image: linear-gradient(to right, rgba(249, 136, 55, 0.00), rgba(249, 136, 55, 0.3), rgba(249, 136, 55, 0.00)); /* 上下边框渐变 */
+    border-image-slice: 1; /* 将渐变应用到边框 */
+    box-sizing: border-box; /* 确保内边距不会增加元素的总大小 */
+    letter-spacing: 1px;
+}
+
+.money {
+    background: linear-gradient(180deg, #FFFAD6 0%, #FEF937 100%);
+    background-clip: text;
+
+    /* Safari/Chrome 需要此属性才能正确显示渐变效果 */
+    -webkit-text-fill-color: transparent;
+
+    /* Safari/Chrome 需要将文本颜色设置为透明 */
+    // box-shadow: 0px 6rpx 0px 0px #A00022;
+    &::before {
+        content: attr(title);
+        // 必须设置 绝对定位 和 z-index: -1 才行
+        position: absolute;
+        z-index: -1;
+        // 阴影
+        text-shadow: 0.623px 2.18px 0px #5A0B00;
+    }
+}
