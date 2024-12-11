@@ -3,8 +3,8 @@ import { HomeApi }  from './types'
 
 export default {
     test: {
-        get: createApi<null, HomeApi.testGetResponse>({
-            url: '',
+        get: createApi<HomeApi.testGetResponse>({
+            url: '/api/users',
             method: 'get'
         })
     }
