@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { NButton } from '@/components/ui'
-import styles from './index.module.less' 
+import styles from './index.module.less'
+import { Icon } from 'umi'
 
 export default function HomePage() {
   const { t } = useTranslation('login')
@@ -17,6 +18,8 @@ export default function HomePage() {
       <NButton className="w-[200px]" onClick={() => {
         console.log(11122)
       }}>click</NButton>
+
+      <Icon icon="local:add" className=' text-red-100' />
 
       {/* tw 渐变 */}
       <div className={`m-[10px] w-[120px] h-20 rounded-[10px] bg-red-100 gb before:bg-cbd before:rounded-[10px] ${styles.bg1}`}></div>

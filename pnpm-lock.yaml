@@ -51,6 +51,9 @@ importers:
         specifier: ^4.3.20
         version: 4.3.20(@babel/core@7.25.2)(@types/node@22.5.4)(@types/react@18.3.5)(eslint@8.57.0)(lightningcss@1.22.1)(prettier@3.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@3.29.4)(stylelint@14.16.1)(terser@5.32.0)(type-fest@4.26.1)(typescript@5.6.2)(webpack@5.94.0)
     devDependencies:
+      '@types/mockjs':
+        specifier: ^1.0.10
+        version: 1.0.10
       '@types/react':
         specifier: ^18.0.33
         version: 18.3.5
@@ -60,6 +63,9 @@ importers:
       '@umijs/plugins':
         specifier: ^4.3.35
         version: 4.3.35(@babel/core@7.25.2)(@types/react-dom@18.3.0)(@types/react@18.3.5)(antd@5.22.3(moment@2.30.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(dva@2.5.0-beta.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(rc-field-form@2.6.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      mockjs:
+        specifier: ^1.1.0
+        version: 1.1.0
       postcss-pxtorem:
         specifier: ^6.1.0
         version: 6.1.0(postcss@8.4.45)
@@ -1303,6 +1309,9 @@ packages:
 
   '@types/minimist@1.2.5':
     resolution: {integrity: sha512-hov8bUuiLiyFPGyFPE1lwWhmzYbirOXQNNo40+y3zow8aFVTeyn3VWL0VFFfdNddA8S4Vf0Tc062rzyNr7Paag==, tarball: https://registry.npmjs.org/@types/minimist/-/minimist-1.2.5.tgz}
+
+  '@types/mockjs@1.0.10':
+    resolution: {integrity: sha512-SXgrhajHG7boLv6oU93CcmdDm0HYRiceuz6b+7z+/2lCJPTWDv0V5YiwFHT2ejE4bQqgSXQiVPQYPWv7LGsK1g==, tarball: https://registry.npmjs.org/@types/mockjs/-/mockjs-1.0.10.tgz}
 
   '@types/node@22.5.4':
     resolution: {integrity: sha512-FDuKUJQm/ju9fT/SeX/6+gBzoPzlVCzfzmGkwKvRHQVxi4BntVbyIwf6a4Xn62mrvndLiml6z/UBXIdEVjQLXg==, tarball: https://registry.npmjs.org/@types/node/-/node-22.5.4.tgz}
@@ -3774,6 +3783,10 @@ packages:
   minipass@7.1.2:
     resolution: {integrity: sha512-qOOzS1cBTWYF4BH8fVePDBOO9iptMnGUEZwNc/cMWnTV2nVLZ7VoNWEPHkYczZA0pdoA7dl6e7FL659nX9S2aw==, tarball: https://registry.npmjs.org/minipass/-/minipass-7.1.2.tgz}
     engines: {node: '>=16 || 14 >=14.17'}
+
+  mockjs@1.1.0:
+    resolution: {integrity: sha512-eQsKcWzIaZzEZ07NuEyO4Nw65g0hdWAyurVol1IPl1gahRwY+svqzfgfey8U8dahLwG44d6/RwEzuK52rSa/JQ==, tarball: https://registry.npmjs.org/mockjs/-/mockjs-1.1.0.tgz}
+    hasBin: true
 
   moment@2.30.1:
     resolution: {integrity: sha512-uEmtNhbDOrWPFS+hdjFCBfy9f2YoyzRpwcl+DqpC6taX21FzsTLQVbMV/W7PzNSX6x/bhC1zA3c2UQ5NzH6how==, tarball: https://registry.npmjs.org/moment/-/moment-2.30.1.tgz}
@@ -7306,6 +7319,8 @@ snapshots:
 
   '@types/minimist@1.2.5': {}
 
+  '@types/mockjs@1.0.10': {}
+
   '@types/node@22.5.4':
     dependencies:
       undici-types: 6.19.8
@@ -10478,6 +10493,10 @@ snapshots:
       kind-of: 6.0.3
 
   minipass@7.1.2: {}
+
+  mockjs@1.1.0:
+    dependencies:
+      commander: 8.3.0
 
   moment@2.30.1: {}
 

@@ -13,6 +13,8 @@ export default defineConfig({
 
     // 启用集成tailwindcss插件
     tailwindcss: {},
+    // 启用icons
+    icons: {},
     plugins: ['@umijs/plugins/dist/tailwindcss'],
 
     // rem适配
