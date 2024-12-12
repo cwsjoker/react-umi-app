@@ -2,9 +2,14 @@ import mockjs from 'mockjs'
 
 
 export default {
+    
+    'GET /api/user': mockjs.mock({
+      'data|10': [{ 'name': /[a-z][A-Z][0-9]/, 'age|1-100': 50, 'type|0-2': 1 }],
+      'message': '',
+      'state': 0
+    }),
 
-    // 返回值可以是数组形式
-    'GET /api/users': {
+    'POST /api/users/create': {
       'data': [
         { id: 1, name: 'foo' },
         { id: 2, name: 'bar' }
@@ -12,13 +17,22 @@ export default {
       'message': '',
       'state': 0
     },
-  
-    // 返回值也可以是对象形式
-    'GET /api/users/1': { id: 1, name: 'foo' },
 
+    'PUT /api/users': {
+      'data': [
+        { id: 1, name: 'foo' },
+        { id: 2, name: 'bar' }
+      ],
+      'message': '',
+      'state': 0
+    },
 
-    'GET /api/tags': mockjs.mock({
-        'list|100': [{ name: '@city', 'value|1-100': 50, 'type|0-2': 1 }],
-    }),
-  
+    'DELETE /api/users/10': {
+      'data': [
+        { id: 1, name: 'foo' },
+        { id: 2, name: 'bar' }
+      ],
+      'message': '',
+      'state': 0
+    },
   }

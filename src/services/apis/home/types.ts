@@ -4,4 +4,9 @@ export namespace HomeApi {
             name: string;
         }[]
     }
+
+    export type userCreateRequest = {
+        name: string;
+        age: number;
+    }
 }

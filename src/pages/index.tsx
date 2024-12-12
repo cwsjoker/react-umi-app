@@ -2,26 +2,10 @@ import { useTranslation } from 'react-i18next'
 import { NButton } from '@/components/ui'
 import styles from './index.module.less'
 import { Icon } from 'umi'
-import { useRequest } from 'ahooks'
-import { useEffect } from 'react'
-import homeApi from '@/services/apis/home'
 
 export default function HomePage() {
   const { t } = useTranslation('login')
   console.log('APP_SITE', APP_COUNTRY)
-
-  const { runAsync } = useRequest(async () => {
-    const res = await homeApi.test.get
-    return res
-  }, {
-    manual: true
-  });
-
-  useEffect(() => {
-    runAsync().then((res: any) => {
-      console.log('res', res)
-    })
-  }, [])
   
   return (
     <div>
@@ -32,7 +16,6 @@ export default function HomePage() {
 
       <div className='w-full h-[30px] pl-10'>1111122</div>
       <NButton className="w-[200px]" onClick={() => {
-        console.log(11122)
       }}>click</NButton>
 
       <Icon icon="local:add" className=' text-red-100' />

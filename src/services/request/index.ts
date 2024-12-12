@@ -11,6 +11,8 @@ export type RequestConfig = {
 
 }
 
+
+
 const request: AxiosInstance = axios.create({
     baseURL: '',
     timeout: 60000,
@@ -25,19 +27,20 @@ request.interceptors.response.use((response: AxiosResponse<HttpJson>) => {
     const { state, message, data } = response.data
     console.log('state', state)
     if (state === 0) {
-        console.log(111111)
         return data
     } else {
-        return Promise.reject(new Error(message))
+        if (state === 401) {
+            console.log('401')
+            return false;
+        }
+
+        if (state === 500) {
+            console.log('500')
+            return false
+        }
     }
 }, (error: AxiosError) => {
     return Promise.reject(error)
 })
 
-
 export const createApi = request
-
-
-// export const http = {
-
-// }
