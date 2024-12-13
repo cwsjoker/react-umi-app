@@ -8,10 +8,11 @@ interface ExtendedButtonProps extends ButtonProps {
 
 export const NButton = React.memo(
   ({className, ...restProps}: ExtendedButtonProps) => {
+    console.log('className', className)
     {
       return (
         <Button
-          className={classNames('h-[44px] py-0 px-8', className)}
+          className={classNames('h-[44px] py-0 px-[8px]', className)}
           variant="gradient"
           {...restProps}
         />

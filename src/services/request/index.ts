@@ -11,8 +11,6 @@ export type RequestConfig = {
 
 }
 
-
-
 const request: AxiosInstance = axios.create({
     baseURL: '',
     timeout: 60000,

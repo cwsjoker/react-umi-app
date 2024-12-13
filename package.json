@@ -22,13 +22,14 @@
     "i18next": "^23.15.1",
     "i18next-resources-to-backend": "^1.2.1",
     "react-i18next": "^15.0.1",
+    "react-router-dom": "^7.0.2",
     "tailwindcss": "^3.4.13",
     "umi": "^4.3.20"
   },
   "devDependencies": {
     "@types/mockjs": "^1.0.10",
     "@types/react": "^18.0.33",
-    "@types/react-dom": "^18.0.11",
+    "@types/react-dom": "^18.3.0",
     "@umijs/plugins": "^4.3.35",
     "mockjs": "^1.1.0",
     "postcss-pxtorem": "^6.1.0",

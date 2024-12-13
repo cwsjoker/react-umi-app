@@ -7,6 +7,7 @@ export default defineConfig({
         { path: "/docs", component: "@/pages/docs" },
         { path: "/tsRule", component: "@/pages/tsRule" },
         { path: "/tsServe", component: "@/pages/tsServe" },
+        { path: "/cssPage", component: "@/pages/cssPage" }
     ],
     npmClient: 'pnpm',
     define: {
