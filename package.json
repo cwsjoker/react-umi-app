@@ -32,6 +32,7 @@
     "@types/react-dom": "^18.3.0",
     "@umijs/plugins": "^4.3.35",
     "mockjs": "^1.1.0",
+    "postcss": "^8.4.49",
     "postcss-pxtorem": "^6.1.0",
     "tinify": "^1.7.1",
     "typescript": "^5.0.3"

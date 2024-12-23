@@ -22,13 +22,13 @@ export default defineConfig({
 
     // rem适配
     extraPostCSSPlugins: [
-            require('postcss-pxtorem')({
-            rootValue: 37.5,
-            unitPrecision: 5,
+        require('postcss-pxtorem')({
+            rootValue: 16,
+            // unitPrecision: 5,
             propList: ['*'],
-            selectorBlackList: ['html'],
-            replace: true,
-            minPixelValue: 0,
+            // selectorBlackList: ['html'],
+            // replace: true,
+            // minPixelValue: 0,
             exclude: /node_modules/i,
         }),
     ],

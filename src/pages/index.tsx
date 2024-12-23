@@ -24,8 +24,9 @@ export default function HomePage() {
           navigate('cssPage')
         }}>css</NButton>
         <NButton className=' h-[40px]'>ts</NButton>
-
       </div>
+
+      <div className=' bg-red-100 w-[375px] h-[158px] text-12'></div>
 
     </div>
   );

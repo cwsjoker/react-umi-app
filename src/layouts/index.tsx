@@ -4,6 +4,7 @@ import { createTheme, MantineProvider } from '@mantine/core';
 
 const theme = createTheme({
   /** Your theme override here */
+  // scale: 1 / (37.5 / 16),
 });
 
 export default function Layout() {
