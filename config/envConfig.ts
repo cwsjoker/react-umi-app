@@ -14,5 +14,5 @@ export const clientEnv = (() => {
 export type ClientEnv = typeof clientEnv
 
 
-export const countryExtension = clientEnv.APP_COUNTRY !== 'lodi' && `.$${clientEnv.APP_COUNTRY}`;
+export const countryExtension = clientEnv.APP_COUNTRY !== 'lodi' ? `.$${clientEnv.APP_COUNTRY}` : '';
 

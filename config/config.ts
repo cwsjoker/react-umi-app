@@ -1,16 +1,11 @@
 import { defineConfig } from 'umi'
 import { clientEnv, countryExtension } from './envConfig'
 import htmlConfig from './htmlConfig';
+import routes from './routes'
 
 export default defineConfig({
     ...htmlConfig,
-    routes: [
-        { path: "/", component: "@/pages/index" },
-        { path: "/docs", component: "@/pages/docs" },
-        { path: "/tsRule", component: "@/pages/tsRule" },
-        { path: "/tsServe", component: "@/pages/tsServe" },
-        { path: "/cssPage", component: "@/pages/cssPage" }
-    ],
+    routes: routes,
     npmClient: 'pnpm',
     define: {
         ...clientEnv,
@@ -41,8 +36,6 @@ export default defineConfig({
             const exts = config.resolve.extensions.values().map(x => [`${countryExtension}${x}`, x]).flat();
             config.resolve.extensions.clear();
             exts.forEach(x => config.resolve.extensions.add(x));
-
-            console.log(config.resolve.extensions)
         }
 
         return config
