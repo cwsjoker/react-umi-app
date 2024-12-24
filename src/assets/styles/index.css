@@ -3,3 +3,34 @@
 @tailwind utilities;
 
 @import url('@mantine/core/styles.css');
+
+
+html,
+body {
+  min-width: 320px;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+    font-family: 'Microsoft YaHei', 'Microsoft JhengHei', PingFangTC, PingFangSC, PingFangHK, Helvetica;
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+    text-size-adjust: 100%;
+    touch-action: manipulation;
+    -webkit-overflow-scrolling: touch;
+    min-height: 100vh;
+    user-select: none;
+}
+
+overflow-auto,
+overflow-scroll,
+overflow-x-auto,
+overflow-y-auto {
+  -webkit-overflow-scrolling: touch;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

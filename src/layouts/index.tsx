@@ -10,7 +10,7 @@ const theme = createTheme({
 export default function Layout() {
   const currentOutlet = useOutlet();
   return (
-    <div className={styles.navs}>
+    <div className=' flex flex-col min-h-[100vh]'>
       <MantineProvider theme={theme}>
         {currentOutlet}
       </MantineProvider>
