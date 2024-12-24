@@ -27,7 +27,6 @@ export default function HomePage() {
       </div>
 
       <div className=' bg-red-100 w-[375px] h-[158px] text-12'></div>
-      
 
     </div>
   );
