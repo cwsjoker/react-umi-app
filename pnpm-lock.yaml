@@ -32,6 +32,9 @@ importers:
       dayjs:
         specifier: ^1.11.13
         version: 1.11.13
+      foca:
+        specifier: ^3.2.0
+        version: 3.2.0(@types/react-dom@18.3.0)(@types/react@18.3.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.2)
       fs-extra:
         specifier: ^11.2.0
         version: 11.2.0
@@ -2843,6 +2846,15 @@ packages:
     resolution: {integrity: sha512-dVsPA/UwQ8+2uoFe5GHtiBMu48dWLTdsuEd7CKGlZlD78r1TTWBvDuFaFGKCo/ZfEr95Uk56vZoX86OsHkUeIg==, tarball: https://registry.npmjs.org/flatten/-/flatten-1.0.3.tgz}
     deprecated: flatten is deprecated in favor of utility frameworks such as lodash.
 
+  foca@3.2.0:
+    resolution: {integrity: sha512-Mlx4i6s1TCa5Ee4AGGq9YeaF/IwpQoufEuUkowcVfwkUNyIyXYSlrauIA0neyQdzUUkVhJ5nPe0EusKXfMmIhw==, tarball: https://registry.npmjs.org/foca/-/foca-3.2.0.tgz}
+    peerDependencies:
+      react: ^18
+      typescript: ^5
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
   follow-redirects@1.15.9:
     resolution: {integrity: sha512-gew4GsXizNgdoRyqmyfMHyAmXsZDk6mHkSxZFCzW9gwlbtOW44CDtYavM+y+72qD/Vq2l550kMF52DT8fOLJqQ==, tarball: https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.15.9.tgz}
     engines: {node: '>=4.0'}
@@ -3181,6 +3193,9 @@ packages:
 
   immer@8.0.4:
     resolution: {integrity: sha512-jMfL18P+/6P6epANRvRk6q8t+3gGhqsJ9EuJ25AXE+9bNTYtssvzeYbEd0mXRYWCmmXSIbnlpz6vd6iJlmGGGQ==, tarball: https://registry.npmjs.org/immer/-/immer-8.0.4.tgz}
+
+  immer@9.0.21:
+    resolution: {integrity: sha512-bc4NBHqOqSfRW7POMkHd51LvClaeMXpm8dx0e8oE2GORbq5aRK7Bxl4FyzVLdGtLmvLKL7BTDBG5ACQm4HWjTA==, tarball: https://registry.npmjs.org/immer/-/immer-9.0.21.tgz}
 
   import-fresh@3.3.0:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==, tarball: https://registry.npmjs.org/import-fresh/-/import-fresh-3.3.0.tgz}
@@ -5575,6 +5590,10 @@ packages:
   toidentifier@1.0.1:
     resolution: {integrity: sha512-o5sSPKEkg/DIQNmH43V0/uerLrpzVedkUh8tGNvaeXpfpuwjKenlSox/2O/BTlZUtEe+JG7s5YhEz608PlAHRA==, tarball: https://registry.npmjs.org/toidentifier/-/toidentifier-1.0.1.tgz}
     engines: {node: '>=0.6'}
+
+  topic@3.0.2:
+    resolution: {integrity: sha512-oEtBTr5ThelLVw3S4yqEyuTFeS0tgE5gDF7Si00eSJBN1Mve//OGX0sFrxDOed7wlR7ZMGKi44itxXjXlRiaGg==, tarball: https://registry.npmjs.org/topic/-/topic-3.0.2.tgz}
+    engines: {node: '>=12'}
 
   trim-newlines@3.0.1:
     resolution: {integrity: sha512-c1PTsA3tYrIsLGkJkzHF+w9F2EyxfXGo4UyJc4pFL++FMjnq0HJS69T3M7d//gKrFKwy429bouPescbjecU+Zw==, tarball: https://registry.npmjs.org/trim-newlines/-/trim-newlines-3.0.1.tgz}
@@ -9596,6 +9615,21 @@ snapshots:
 
   flatten@1.0.3: {}
 
+  foca@3.2.0(@types/react-dom@18.3.0)(@types/react@18.3.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.2):
+    dependencies:
+      immer: 9.0.21
+      react: 18.3.1
+      react-redux: 8.1.3(@types/react-dom@18.3.0)(@types/react@18.3.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(redux@4.2.1)
+      redux: 4.2.1
+      topic: 3.0.2
+    optionalDependencies:
+      typescript: 5.6.2
+    transitivePeerDependencies:
+      - '@types/react'
+      - '@types/react-dom'
+      - react-dom
+      - react-native
+
   follow-redirects@1.15.9: {}
 
   for-each@0.3.3:
@@ -9962,6 +9996,8 @@ snapshots:
     optional: true
 
   immer@8.0.4: {}
+
+  immer@9.0.21: {}
 
   import-fresh@3.3.0:
     dependencies:
@@ -12589,6 +12625,8 @@ snapshots:
   toggle-selection@1.0.6: {}
 
   toidentifier@1.0.1: {}
+
+  topic@3.0.2: {}
 
   trim-newlines@3.0.1: {}
 

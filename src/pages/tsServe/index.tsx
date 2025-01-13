@@ -1,8 +1,16 @@
 import { Button } from "@mantine/core";
 import homeApi from "@/services/apis/home";
 import { useRequest } from "ahooks";
+import { useEffect } from "react";
+import configModel from '@/store/models/config.model'
+import { useModel } from 'foca'
 
 const IndexPage = () => {
+  const config = useModel(configModel, state => {
+    return state.config
+  })
+
+
   // get
   const { runAsync: getRunAsync } = useRequest(
     async () => {
@@ -44,6 +52,10 @@ const IndexPage = () => {
     }
   );
 
+  useEffect(() => {
+    configModel.getConfig()
+  }, [])
+
   return (
     <div className=" p-[10px]">
       <div className=" grid grid-cols-4 gap-[10px]">
@@ -52,6 +64,11 @@ const IndexPage = () => {
         <Button onClick={putRunAsync}>put</Button>
         <Button onClick={deleteRunAsync}>delete</Button>
       </div>
+      {
+        config.isShow && (
+          <div>isshow</div>
+        )
+      }
     </div>
   );
 };

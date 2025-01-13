@@ -2,6 +2,7 @@ import { useOutlet } from 'umi';
 import styles from './index.less';
 import { createTheme, MantineProvider } from '@mantine/core';
 import useSetup from '@/layouts/useSetup'
+import { StoreProvider } from '@/store'
 
 const theme = createTheme({
   /** Your theme override here */
@@ -31,9 +32,11 @@ export default function Layout() {
   
   return (
     <div className=' flex flex-col min-h-[100vh]'>
-      <MantineProvider theme={theme}>
-        <Root />
-      </MantineProvider>
+      <StoreProvider>
+        <MantineProvider theme={theme}>
+          <Root />
+        </MantineProvider>
+      </StoreProvider>
     </div>
   );
 }
