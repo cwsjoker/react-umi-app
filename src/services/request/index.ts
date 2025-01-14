@@ -1,14 +1,9 @@
-import axios, { AxiosResponse, AxiosRequestConfig, AxiosInstance, AxiosError } from 'axios'
-
-
+import axios, { AxiosResponse, AxiosInstance, AxiosError, InternalAxiosRequestConfig } from 'axios'
 
 export interface HttpJson<T = any> {
     state: number;
     message: string;
     data: T;
-}
-export type RequestConfig = {
-
 }
 
 const request: AxiosInstance = axios.create({
@@ -21,7 +16,19 @@ const request: AxiosInstance = axios.create({
     },
 })
 
+request.interceptors.request.use((config: InternalAxiosRequestConfig) => {
+    config.headers['pl'] = 'h5';
+    config.headers['version'] = 'v1';
+    config.headers['Authorization'] = '';
+    
+    return config
+}, (error: AxiosError) => {
+    return Promise.reject(error);
+})
+
+
 request.interceptors.response.use((response: AxiosResponse<HttpJson>) => {
+    console.log('response', response)
     const { state, message, data } = response.data
     console.log('state', state)
     if (state === 0) {

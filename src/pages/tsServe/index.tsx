@@ -58,17 +58,22 @@ const IndexPage = () => {
 
   return (
     <div className=" p-[10px]">
-      <div className=" grid grid-cols-4 gap-[10px]">
-        <Button onClick={getRunAsync}>get</Button>
-        <Button onClick={postRunAsync}>post</Button>
-        <Button onClick={putRunAsync}>put</Button>
-        <Button onClick={deleteRunAsync}>delete</Button>
+      {/* server */}
+      <div className=" grid grid-cols-4 gap-10">
+        <Button className="text-12 w-full h-44 p-0" size="xs" onClick={getRunAsync}>get</Button>
+        <Button className="text-12 w-full h-44 p-0" size="xs" onClick={postRunAsync}>post</Button>
+        <Button className="text-12 w-full h-44 p-0" size="xs" onClick={putRunAsync}>put</Button>
+        <Button className="text-12 w-full h-44 p-0" size="xs" onClick={deleteRunAsync}>delete</Button>
       </div>
+
+      {/* store */}
       {
         config.isShow && (
           <div>isshow</div>
         )
       }
+
+      {/*  */}
     </div>
   );
 };
