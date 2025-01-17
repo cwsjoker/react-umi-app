@@ -33,6 +33,8 @@ const Index = () => {
 
     const f:Partial<PersonRecord> = { name: 'clear' }
 
+    const name_1 = b.age ?? 'Guest1';
+
     return (
         <div>ts</div>
     )
