@@ -12,8 +12,8 @@ export const NButton = React.memo(
     {
       return (
         <Button
-          className={classNames('h-[44px] py-0 px-[8px]', className)}
-          variant="gradient"
+          className={classNames('h-40 py-0 px-8 text-12', className)}
+          // variant="gradient"
           {...restProps}
         />
       )

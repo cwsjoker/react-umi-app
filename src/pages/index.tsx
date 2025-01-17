@@ -13,22 +13,23 @@ export default function HomePage() {
   
   return (
     <div>
-      <h2>Yay! Welcome to umi!111</h2>
       <h3>{t('login1')}</h3>
-      <h4>{APP_COUNTRY}</h4>
-      <h4>{APP_SITE}</h4>
+      <h4>country: {APP_COUNTRY}</h4>
+      <h4>site: {APP_SITE}</h4>
 
       <div className=' grid grid-cols-4 gap-10'>
-        <NButton className=' h-[40px]' onClick={() => {
+        <NButton onClick={() => {
           navigate('/tsRule')
         }}>ts</NButton>
-        <NButton className=' h-[40px]' onClick={() => {
+        <NButton onClick={() => {
           navigate('tsServe')
         }}>server</NButton>
-        <NButton className=' h-[40px]' onClick={() => {
+        <NButton onClick={() => {
           navigate('cssPage')
         }}>css</NButton>
-        <NButton className=' h-[40px]'>ts</NButton>
+        <NButton onClick={() => {
+          navigate('comPage')
+        }}>compage</NButton>
       </div>
 
       <div className=' bg-red-100 w-[375px] h-[158px] text-12'></div>

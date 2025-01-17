@@ -8,6 +8,7 @@ const routes: IConfigFromPlugins['routes'] = [
     { path: "/tsRule", component: "@/pages/tsRule" },
     { path: "/tsServe", component: "@/pages/tsServe" },
     { path: "/cssPage", component: "@/pages/cssPage" },
+    { path: "/comPage", component: "@/pages/comPage" },
 ]
 
 const resolve = (() => {
