@@ -3,6 +3,7 @@ import styles from './index.less';
 import { createTheme, MantineProvider } from '@mantine/core';
 import useSetup from '@/layouts/useSetup'
 import { StoreProvider } from '@/store'
+import AppModal from '@/components/business/AppModal'
 
 const theme = createTheme({
   /** Your theme override here */
@@ -24,6 +25,7 @@ const Root = () => {
   return (
     <>
       <BaseLayout />
+      <AppModal />
     </>
   )
 }
