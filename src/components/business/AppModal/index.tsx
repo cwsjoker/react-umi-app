@@ -1,4 +1,6 @@
 import { lazy, Suspense, useMemo } from "react";
+import modalModel from '@/store/models/modal.model'
+import { useModel } from 'foca'
 
 const NModalTypes = [
   {
@@ -18,19 +20,29 @@ const NModalTypes = [
 
 
 const AppModal = () => {
-  
-  
+  const modalQueue = useModel(modalModel, state => state.modalQueue)
+  console.log('modalQueue', modalQueue)
+
   const modals = useMemo(() => {
     return NModalTypes.map((item) => {
-      return {
-        ...item,
-        opened: false,
+      const showModal = modalQueue.includes(item.type)
+      const props = showModal ? {
+        opened: true,
         onClose() {
           console.log('close')
+          modalModel.closeModal({type: item.type})
         }
+      } : {
+        opened: false,
+        onClose() {}
+      }
+
+      return {
+        ...item,
+        ...props
       };
     })
-  }, []);
+  }, [modalQueue]);
 
   return (
     <>
