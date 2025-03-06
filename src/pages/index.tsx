@@ -33,6 +33,9 @@ export default function HomePage() {
         <NButton onClick={() => {
           navigate('/bus')
         }}>bus</NButton>
+        <NButton onClick={() => {
+          navigate('/downImg')
+        }}>downImg</NButton>
       </div>
 
       <div className=' bg-red-100 w-[375px] h-[158px] text-12'></div>

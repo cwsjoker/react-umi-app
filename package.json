@@ -21,6 +21,7 @@
     "foca": "^3.2.0",
     "fs-extra": "^11.2.0",
     "glob": "^11.0.0",
+    "html2canvas": "^1.4.1",
     "i18next": "^23.15.1",
     "i18next-resources-to-backend": "^1.2.1",
     "lib-flexible": "^0.3.2",
