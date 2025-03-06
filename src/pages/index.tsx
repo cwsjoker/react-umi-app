@@ -30,6 +30,9 @@ export default function HomePage() {
         <NButton onClick={() => {
           navigate('comPage')
         }}>compage</NButton>
+        <NButton onClick={() => {
+          navigate('/bus')
+        }}>bus</NButton>
       </div>
 
       <div className=' bg-red-100 w-[375px] h-[158px] text-12'></div>
