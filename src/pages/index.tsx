@@ -4,6 +4,8 @@ import { navigate } from '@/router/navigate'
 import { NModal } from '@/components/ui/Modal'
 import { useState } from 'react'
 
+import ThirdLogin from '@/components/business/ThirdLogin'
+
 export default function HomePage() {
   const { t } = useTranslation('login')
   console.log('APP_SITE', APP_COUNTRY)
@@ -41,6 +43,8 @@ export default function HomePage() {
       <div className=' bg-red-100 w-[375px] h-[158px] text-12'></div>
 
       <NModal opened={open} onClose={() => {}}></NModal>
+
+      <ThirdLogin />
 
 
 
