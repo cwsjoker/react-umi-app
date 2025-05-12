@@ -1,0 +1,41 @@
+.scroll-wrap {
+  height: 100%;
+  position: relative;
+  // overflow: scroll;
+  .pulldown-wrapper {
+    transform: translateY(-100%) translateZ(0);
+    color: #999;
+  }
+
+  .title-split {
+    margin: 20px 0 0;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    div {
+      height: 15px;
+      font-size: 12px;
+      letter-spacing: 0;
+      text-align: center;
+      line-height: 15px;
+      font-weight: 400;
+      padding: 0 3px;
+      color: var(--ld-combination-fontColorWeak-2);
+    }
+
+    span {
+      width: 60px;
+      height: 1px;
+
+      &:first-child {
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0%) 0%, var(--ld-combination-fontColorWeak-2) 100%);
+      }
+
+      &:last-child {
+        background: linear-gradient(270deg, rgba(255, 255, 255, 0%) 0%, var(--ld-combination-fontColorWeak-2) 100%);
+      }
+    }
+  }
+}
