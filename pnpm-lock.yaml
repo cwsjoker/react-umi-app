@@ -26,6 +26,9 @@ importers:
       '@emotion/styled':
         specifier: ^11.13.0
         version: 11.13.0(@emotion/react@11.13.3(@types/react@18.3.5)(react@18.3.1))(@types/react@18.3.5)(react@18.3.1)
+      '@lucky-canvas/react':
+        specifier: ^0.1.13
+        version: 0.1.13
       '@mantine/core':
         specifier: ^7.13.2
         version: 7.13.2(@mantine/hooks@7.13.2(react@18.3.1))(@types/react@18.3.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -1314,6 +1317,9 @@ packages:
     engines: {node: '>=8'}
     peerDependencies:
       react: '>=16.3.0'
+
+  '@lucky-canvas/react@0.1.13':
+    resolution: {integrity: sha512-4M2bHOn5lEBubqDXXHKONnAERr3O4YIbQ8Q8QynmbD0DeSk/VQewBAzx4RopHr3Fe0dcN98YmvwaxqNl39OR7w==, tarball: https://registry.npmjs.org/@lucky-canvas/react/-/react-0.1.13.tgz}
 
   '@mantine/core@7.13.2':
     resolution: {integrity: sha512-nD8oKIal+KdthqF074+ZG21035QBEAKso2zK9D6zWxRTLVCjLCNSc5JSXrXLrdBTnvPQGY26yunX4+MEPlmrHg==, tarball: https://registry.npmjs.org/@mantine/core/-/core-7.13.2.tgz}
@@ -4036,6 +4042,9 @@ packages:
   lru-cache@6.0.0:
     resolution: {integrity: sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==, tarball: https://registry.npmjs.org/lru-cache/-/lru-cache-6.0.0.tgz}
     engines: {node: '>=10'}
+
+  lucky-canvas@1.7.27:
+    resolution: {integrity: sha512-Ftz6qD+863bI7xijBmZg3dw3cNEc7odPr70EZQcGA14y3TgTAzH65HPosOCd6kKUlMwhntBaHMx3onoj9MtJRQ==, tarball: https://registry.npmjs.org/lucky-canvas/-/lucky-canvas-1.7.27.tgz}
 
   make-dir@2.1.0:
     resolution: {integrity: sha512-LS9X+dc8KLxXCb8dni79fLIIUA5VyZoyjSMCwTluaXA0o27cCK0bhXkpgw+sTXVpPy/lSO57ilRixqk0vDmtRA==, tarball: https://registry.npmjs.org/make-dir/-/make-dir-2.1.0.tgz}
@@ -7795,6 +7804,10 @@ snapshots:
       react: 18.3.1
       react-is: 16.13.1
 
+  '@lucky-canvas/react@0.1.13':
+    dependencies:
+      lucky-canvas: 1.7.27
+
   '@mantine/core@7.13.2(@mantine/hooks@7.13.2(react@18.3.1))(@types/react@18.3.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@floating-ui/react': 0.26.24(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -11278,6 +11291,8 @@ snapshots:
   lru-cache@6.0.0:
     dependencies:
       yallist: 4.0.0
+
+  lucky-canvas@1.7.27: {}
 
   make-dir@2.1.0:
     dependencies:
