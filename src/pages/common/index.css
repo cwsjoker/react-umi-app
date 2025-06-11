@@ -1,0 +1,17 @@
+.box1 {
+    /* 背景渐变 */
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+
+    /* 边框渐变 */
+    border: 5px solid;
+    border-image: linear-gradient(45deg, #ff7e5f, #feb47b) 1;
+    
+    /* 使内容居中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    box-sizing: border-box;
+}
