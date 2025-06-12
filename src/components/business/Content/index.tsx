@@ -11,28 +11,29 @@ type ConetntCompProps = {
     childConClassName?: string;
     angle: number;
     children: React.ReactNode;
+    direction?: 'left' | 'right';
 }
 export const ConetntComp: React.FC<ConetntCompProps> = ({...props}) => {
 
-    const { angle = 0, wrapClassName, conClassName, childConClassName } = props
-
+    const { angle = 0, wrapClassName, conClassName, childConClassName, direction = 'left' } = props
     const ref = useRef(null);
     const size = useSize(ref);
+    const _angle = direction === 'right' ? -angle : angle; // 根据方向调整角度
     const _translate = ((size?.width || 0) /2) * Math.tan((angle * Math.PI) / 180);
     
     return (
         <>
-        <div>{size?.width}</div>
-        <div>{_translate}</div>
+        <div className='text-[#fff]'>{size?.width}</div>
+        <div className='text-[#fff]'>{_translate}</div>
                 <div ref={ref} className={classNames(`w-full h-auto bg-transparent overflow-hidden rounded-12`, wrapClassName)}>
                     <div className={classNames(`size-full  rounded-[inherit] text-[#fff]`, conClassName)}
                         style={{
-                            transform: `skewY(${angle}deg) translateY(${_translate}px)`,
+                            transform: `skewY(${_angle}deg) translateY(${_translate}px)`,
                         }}
                     >
-                        <div className={classNames(`size-full rounded-b-12 overflow-hidden`, childConClassName)}
+                        <div className={classNames(`size-full rounded-b-[inherit] `, childConClassName)}
                             style={{
-                                transform: `skewY(${-angle}deg) translateY(${-_translate}px)`,
+                                transform: `skewY(${-_angle}deg) translateY(${-_translate}px)`,
                                 paddingTop: `${_translate * 2}px`,
                             }}
                         >
@@ -52,7 +53,7 @@ export default ConetntComp
 // 1.解决根据skew-y角度算出translate-y的角度   解决
 // 2.父级div的宽度 解决 
 // 3.skew里面的内容不倾斜 解决
-// 4. 边框    
+// 4. 边框  拼接解决
 // rounded-[inherit]
 // Math.tan((5 * Math.PI) / 180) 计算 tan角度值
 

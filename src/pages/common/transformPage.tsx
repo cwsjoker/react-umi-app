@@ -4,7 +4,8 @@ const indexPage = () => {
     
     return (
         <>
-        <div className="p-10">
+        <div className="p-10 bg-black">
+
             <ConetntComp
                 angle={5}
                 wrapClassName='!w-[100px] !h-[100px]'
@@ -30,13 +31,14 @@ const indexPage = () => {
             </ConetntComp>
 
             <ConetntComp
-                angle={10}
+                angle={6}
+                direction='left'
                 wrapClassName='mt-10'
-                conClassName=" border border-[#000] bg-gradient-to-b from-purple-400 to-yellow-500"
-                childConClassName=" border-b-[1px] border-b-[#000]"
+                conClassName=" bg-[linear-gradient(205deg,rgba(197,47,255,0.4)_30.6%,rgba(249,136,55,0.00)_101.86%)] gb before:bg-cbdd before:rounded-[inherit] "
+                childConClassName=" gbbb before:bg-cbdd"
             >
                 {
-                    <div className='pd-10'>
+                    <div className='pb-10 -mt-10'>
                         <div>123</div>
                         <div>123</div>
                         <div>123</div>
