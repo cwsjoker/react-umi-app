@@ -19,7 +19,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         cbd: "linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(0, 0, 255, 1) 50%, rgba(255, 0, 0, 1) 100%)",
-        cbdd: "linear-gradient(271deg, rgba(255, 255, 255, 0.10) 0.42%, rgba(255, 255, 255, 0.50) 49.92%, rgba(255, 255, 255, 0.10) 99.42%);"
+        cbdd: "linear-gradient(271deg, rgba(255, 0, 0, 0.8) 0.42%, rgba(255, 0, 0, 0.8) 49.92%, rgba(255, 0, 0, 0.8) 99.42%);"
       },
       backgroundSize: {
         'size-full': '100% 100%'

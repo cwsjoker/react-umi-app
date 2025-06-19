@@ -12,14 +12,18 @@ type ConetntCompProps = {
     angle: number;
     children: React.ReactNode;
     direction?: 'left' | 'right';
+    conBg?: string;
 }
 export const ConetntComp: React.FC<ConetntCompProps> = ({...props}) => {
 
-    const { angle = 0, wrapClassName, conClassName, childConClassName, direction = 'left' } = props
+    const { angle = 0, wrapClassName, conClassName, childConClassName, direction = 'left', conBg } = props
     const ref = useRef(null);
     const size = useSize(ref);
     const _angle = direction === 'right' ? -angle : angle; // 根据方向调整角度
     const _translate = ((size?.width || 0) /2) * Math.tan((angle * Math.PI) / 180);
+
+
+    console.log('conBg', conBg)
     
     return (
         <>
@@ -29,6 +33,7 @@ export const ConetntComp: React.FC<ConetntCompProps> = ({...props}) => {
                     <div className={classNames(`size-full  rounded-[inherit] text-[#fff]`, conClassName)}
                         style={{
                             transform: `skewY(${_angle}deg) translateY(${_translate}px)`,
+                            backgroundImage: conBg
                         }}
                     >
                         <div className={classNames(`size-full rounded-b-[inherit] `, childConClassName)}
