@@ -14,6 +14,7 @@ const routes: IConfigFromPlugins['routes'] = [
     { path: "/scrollPage", component: "@/pages/common/scrollPage" },
     { path: "/luckyPage", component: "@/pages/common/luckyPage" },
     { path: "/transformPage", component: "@/pages/common/transformPage" },
+    { path: "/lottiePage", component: "@/pages/common/lottiePage" },
 ]
 
 const resolve = (() => {
