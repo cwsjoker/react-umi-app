@@ -41,6 +41,10 @@ module.exports = {
         ...genSizeMap(100),
         contentHeight: 'calc(100vh - 48px)',
       },
+      screens: {
+        'pad': '640px',
+        'pc': '1200px'
+      }
     },
   },
   plugins: [],
