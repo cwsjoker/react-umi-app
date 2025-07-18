@@ -4,6 +4,8 @@ import { createTheme, MantineProvider } from '@mantine/core';
 import useSetup from '@/layouts/useSetup'
 import { StoreProvider } from '@/store'
 import AppModal from '@/components/business/AppModal'
+import { HTML5Backend } from 'react-dnd-html5-backend'
+import { DndProvider } from 'react-dnd'
 
 const theme = createTheme({
   /** Your theme override here */
@@ -36,7 +38,9 @@ export default function Layout() {
     <div className=' flex flex-col min-h-[100vh]'>
       <StoreProvider>
         <MantineProvider theme={theme}>
-          <Root />
+          <DndProvider backend={HTML5Backend}>
+            <Root />
+          </DndProvider>
         </MantineProvider>
       </StoreProvider>
     </div>
