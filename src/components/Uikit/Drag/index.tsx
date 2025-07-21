@@ -9,22 +9,25 @@ type DragPros = {
   children: React.ReactNode;
 };
 
+const eventsFor = {
+  touch: {
+    start: 'touchstart',
+    move: 'touchmove',
+    stop: 'touchend'
+  },
+  mouse: {
+    start: 'mousedown',
+    move: 'mousemove',
+    stop: 'mouseup'
+  }
+};
+
 const Drag: React.FC<DragPros> = ({ dragName = '', defaultPosition = {x: 0, y:0}, children }) => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [dragging, setDragging] = useState(false);
   const [offset, setOffset] = useState({ x: 0, y: 0 });
   
   const dragRefs = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const savedPositionStr = window.localStorage.getItem(`${dragName}_position`);
-    if (savedPositionStr) {
-      const savedPosition = JSON.parse(savedPositionStr);
-      setPosition(savedPosition);
-    } else {
-      setPosition(defaultPosition)
-    }
-  }, []);
 
   // 鼠标按下事件
   const onMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -76,6 +79,26 @@ const Drag: React.FC<DragPros> = ({ dragName = '', defaultPosition = {x: 0, y:0}
       localStorage.setItem(`${dragName}_position`, JSON.stringify(position));
     }
   };
+
+  useEffect(() => {
+    const savedPositionStr = window.localStorage.getItem(`${dragName}_position`);
+    if (savedPositionStr) {
+      const savedPosition = JSON.parse(savedPositionStr);
+      setPosition(savedPosition);
+    } else {
+      setPosition(defaultPosition)
+    }
+
+    // if (dragRefs.current) {
+    //   dragRefs.current.addEventListener('mousedown', onMouseDown);
+
+    //   // Cleanup
+    //   return () => {
+    //     dragRefs.current?.removeEventListener('mousedown', onMouseDown);
+    //   };
+    // }
+    
+  }, []);
 
   return (
     <div

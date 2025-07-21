@@ -20,7 +20,7 @@ const IndexPage = () => {
         dragName="drag1"
         defaultPosition={{
           x: 200,
-          y:200
+          y: 200
         }}
       >
         <div className="w-80 h-80 bg-[#0f0]"></div>
