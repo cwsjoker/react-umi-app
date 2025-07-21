@@ -83,6 +83,9 @@ importers:
       react-dnd-html5-backend:
         specifier: ^16.0.1
         version: 16.0.1
+      react-draggable:
+        specifier: ^4.5.0
+        version: 4.5.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react-i18next:
         specifier: ^15.0.1
         version: 15.0.1(i18next@23.15.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -5190,6 +5193,12 @@ packages:
     resolution: {integrity: sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw==, tarball: https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz}
     peerDependencies:
       react: ^18.3.1
+
+  react-draggable@4.5.0:
+    resolution: {integrity: sha512-VC+HBLEZ0XJxnOxVAZsdRi8rD04Iz3SiiKOoYzamjylUcju/hP9np/aZdLHf/7WOD268WMoNJMvYfB5yAK45cw==, tarball: https://registry.npmjs.org/react-draggable/-/react-draggable-4.5.0.tgz}
+    peerDependencies:
+      react: '>= 16.3.0'
+      react-dom: '>= 16.3.0'
 
   react-error-overlay@6.0.9:
     resolution: {integrity: sha512-nQTTcUu+ATDbrSD1BZHr5kgSD4oF8OFjxun8uAaL8RwPBacGBNPf/yAuVVdx17N8XNzRDMrZ9XcKZHCjPW+9ew==, tarball: https://registry.npmjs.org/react-error-overlay/-/react-error-overlay-6.0.9.tgz}
@@ -12598,6 +12607,13 @@ snapshots:
       loose-envify: 1.4.0
       react: 18.3.1
       scheduler: 0.23.2
+
+  react-draggable@4.5.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+    dependencies:
+      clsx: 2.1.1
+      prop-types: 15.8.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
 
   react-error-overlay@6.0.9: {}
 
